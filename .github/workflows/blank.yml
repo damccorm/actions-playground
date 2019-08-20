@@ -10,4 +10,4 @@ jobs:
     steps:
     - run: printenv
     
-    - run: ::[error]ABC
+    - run: echo ::[error]ABC
