@@ -10,4 +10,6 @@ jobs:
     steps:
     - run: printenv
     
-    - run: echo ::[error]ABC
+    - run: echo ::[name=FOO;]BAR
+    
+    - run: printenv
