@@ -12,8 +12,8 @@ jobs:
     
     - run: echo "::[set-env name=FOO;]BAR"
     
-    - run: printenv
+    - run: echo $FOO
     
     - run: echo "##[set-env name=FOO;]BAR"
     
-    - run: printenv
+    - run: echo $FOO
