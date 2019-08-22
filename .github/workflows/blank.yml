@@ -29,7 +29,7 @@ jobs:
     
     - run: echo %ImageVersion%
     
-    - run: dir %RUNNER_TOOL_CACHE%\node
+    - run: echo %RUNNER_TOOL_CACHE%
 
   mac:
 
