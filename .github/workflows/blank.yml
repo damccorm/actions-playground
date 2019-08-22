@@ -13,6 +13,8 @@ jobs:
         node-version: 8
         
     - run: node -v
+    
+    - run: echo $ImageVersion
 
   windows:
 
@@ -24,6 +26,8 @@ jobs:
         node-version: 8
         
     - run: node -v
+    
+    - run: echo %ImageVersion%
 
   mac:
 
@@ -35,3 +39,5 @@ jobs:
         node-version: 8
         
     - run: node -v
+    
+    - run: echo $ImageVersion
