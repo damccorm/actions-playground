@@ -29,7 +29,9 @@ jobs:
     
     - run: echo %ImageVersion%
     
-    - run: echo %RUNNER_TOOL_CACHE%
+    - run: dir C:\hostedtoolcache\windows
+    
+    - run: dir C:\hostedtoolcache\windows\node
 
   mac:
 
