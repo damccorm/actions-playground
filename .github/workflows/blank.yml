@@ -16,6 +16,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           version: ${{ matrix.node_version }}
-      - run: sudo npm install -g npm@6
+      - run: npm install -g npm@6
       - run: npm version
       - run: npm ci
