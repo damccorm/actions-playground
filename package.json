@@ -1,0 +1,18 @@
+{
+  "name": "labeler",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Labels pull requests by files altered",
+  "main": "lib/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actions/labeler.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "GitHub",
+  "license": "MIT"
+}
