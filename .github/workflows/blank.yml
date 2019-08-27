@@ -17,4 +17,5 @@ jobs:
         with:
           version: ${{ matrix.node_version }}
       - run: npm install -g npm@6
+      - run: npm version
       - run: npm ci
