@@ -3,9 +3,21 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-
+  linux:
     runs-on: ubuntu-latest
     
     steps:
-    - run: ls -r $RUNNER_TOOL_CACHE
+    - run: ls $RUNNER_TOOL_CACHE/Python
+    - run: ls $RUNNER_TOOL_CACHE/PyPy
+  mac:
+    runs-on: macOS-latest
+    
+    steps:
+    - run: ls $RUNNER_TOOL_CACHE/Python
+    - run: ls $RUNNER_TOOL_CACHE/PyPy
+  linux:
+    runs-on: windows-latest
+    
+    steps:
+    - run: dir $RUNNER_TOOL_CACHE\Python
+    - run: dir $RUNNER_TOOL_CACHE\PyPy
