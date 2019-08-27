@@ -19,5 +19,5 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - run: dir $RUNNER_TOOL_CACHE\Python
-    - run: dir $RUNNER_TOOL_CACHE\PyPy
+    - run: dir %RUNNER_TOOL_CACHE%\Python
+    - run: dir %RUNNER_TOOL_CACHE%\PyPy
