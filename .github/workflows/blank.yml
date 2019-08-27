@@ -22,5 +22,7 @@ jobs:
     
     steps:
     - run: echo %RUNNER_TOOL_CACHE%
-    - run: dir %RUNNER_TOOL_CACHE%\Python
-    - run: dir %RUNNER_TOOL_CACHE%\PyPy
+    - run: dir %RUNNER_TOOL_CACHE%/Python
+      shell: bash
+    - run: dir %RUNNER_TOOL_CACHE%/PyPy
+      shell: bash
