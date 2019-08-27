@@ -15,7 +15,7 @@ jobs:
     steps:
     - run: ls $RUNNER_TOOL_CACHE/Python
     - run: ls $RUNNER_TOOL_CACHE/PyPy
-  linux:
+  win:
     runs-on: windows-latest
     
     steps:
