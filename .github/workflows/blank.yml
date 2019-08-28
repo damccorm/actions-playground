@@ -14,12 +14,12 @@ jobs:
     
     - run: cat .nvmrc
     
-    - run: echo "##[set-env name=NVMRC;]$(cat .nvmrc)"
-    - run: echo "::[set-env name=abc;]def"
+    - run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+      id: nvm
       
     - run: printenv
 
     - name: Use Node.js (.nvmrc)
       uses: actions/setup-node@v1
       with:
-        node-version: "${NVMRC}"
+        node-version: "${{ actions.nvm.outputs.NVMRC }}"
