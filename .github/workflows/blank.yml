@@ -7,5 +7,8 @@ jobs:
 
     runs-on: ubuntu-latest
     
+    if: github.event.action == 'unassigned'
+    
     steps:
     - uses: actions/checkout@v1
+    
