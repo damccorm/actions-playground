@@ -14,8 +14,8 @@ jobs:
     
     - run: cat .nvmrc
     
-    - name: Read .nvmrc
-      run: "echo ##[set-env name=NVMRC;]$(cat .nvmrc)"
+    - run: "echo ##[set-env name=NVMRC;]$(cat .nvmrc)"
+    - run: "echo ##[set-env name=abc;]def"
       
     - run: printenv
 
