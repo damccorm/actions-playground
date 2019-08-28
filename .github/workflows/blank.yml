@@ -22,4 +22,4 @@ jobs:
     - name: Use Node.js (.nvmrc)
       uses: actions/setup-node@v1
       with:
-        node-version: $NVMRC
+        node-version: ${{ env.NVMRC }}
