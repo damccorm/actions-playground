@@ -15,7 +15,7 @@ jobs:
     - run: cat .nvmrc
     
     - name: Read .nvmrc
-      run: ##[set-env name=nvmrc;]$(cat .nvmrc)
+      run: "echo ##[set-env name=nvmrc;]$(cat .nvmrc)"
 
     - name: Use Node.js (.nvmrc)
       uses: actions/setup-node@v1
