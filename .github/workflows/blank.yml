@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
+    - run: echo $GITHUB_EVENT_PATH
+    - run: cat $GITHUB_EVENT_PATH
