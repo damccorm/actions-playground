@@ -9,7 +9,7 @@ jobs:
     steps:
     - run: printenv
     
-    - run: echo "::set-env name=FOO::BAR"
+    - run: echo ::set-env name=FOO::BAR
     
     - run: echo $FOO
     
