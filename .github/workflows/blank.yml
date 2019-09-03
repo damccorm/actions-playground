@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - run: Write-Host "Hello World"
-      shell: powershell
+    - uses: actions/checkout@v1
