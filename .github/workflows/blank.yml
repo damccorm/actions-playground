@@ -8,4 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/setup-node@deprecate-version
+      with:
+        version: '10.x'
