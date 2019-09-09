@@ -4,8 +4,15 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
+    - run: printenv
+    
+    - run: echo ::set-env name=FOO,::BAR
+    
+    - run: echo $FOO
+    
+    - run: echo "##[set-env name=FOO;]BAR"
+    
+    - run: echo $FOO
