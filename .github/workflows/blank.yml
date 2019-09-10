@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - run: node -v
     - run: npm -v
