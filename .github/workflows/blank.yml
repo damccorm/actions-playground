@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/setup-node@deprecate-version
+    - uses: actions/setup-node@master
       with:
         version: '10.x'
