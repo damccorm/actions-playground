@@ -3,9 +3,19 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-    
+  test:
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: ['8.10', '10', '12']
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          version: ${{ matrix.node_version }}
+      - run: npm install -g npm@6
+      - run: npm version
+      - run: npm ci
