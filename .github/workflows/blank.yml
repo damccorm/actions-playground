@@ -9,3 +9,17 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    
+    - run: ls
+    
+    - run: cat .nvmrc
+    
+    - run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+      id: nvm
+      
+    - run: printenv
+
+    - name: Use Node.js (.nvmrc)
+      uses: actions/setup-node@v1
+      with:
+        node-version: "${{ steps.nvm.outputs.NVMRC }}"
